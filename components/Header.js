@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import React from "react";
-import { ModeToggle } from "./ThemeSwitcher";
 import Image from "next/image";
 const tabs = [
   { id: "home", label: "Start", link: "/" },
