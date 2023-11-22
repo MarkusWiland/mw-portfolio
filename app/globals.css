@@ -1,27 +1,57 @@
+/* global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --icon-color-javascript: #f0db4f;
+    --icon-color-typescript: #007acc;
+    --icon-color-java: #f89820;
+    --icon-color-html: #e34c26;
+    --icon-color-css: #264de4;
+    --icon-color-graphql: #e535ab;
+    --icon-color-tailwind: #a5f3fc;
+    --icon-color-postgres: #0064a5;
+    --icon-color-react: #61dbfb;
+    --icon-color-next: #f6f9fc;
+    --icon-color-vue: #41b883;
+  }
+}
+html {
+  font-family: "sans sarif";
+}
+@media (hover: hover) {
+  .animated-list:hover li {
+    opacity: 0.5;
+  }
+
+  .animated-list:hover li:hover {
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}
+
+.code-language:hover .icon {
+  color: var(--icon-color, #fff); /* Change color to lang.iconColor on hover */
+}
+.code-tools:hover .icon {
+  color: var(--icon-color, #fff); /* Change color to lang.iconColor on hover */
+}
+
+h1 {
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+h2 {
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+p {
+  line-height: 1.8;
+  letter-spacing: -0.01em;
 }
