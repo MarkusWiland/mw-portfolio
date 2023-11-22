@@ -54,8 +54,8 @@ export default function About() {
                 Har du en fråga till mig? Kontakta mig på något av sätten nedan.
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 animated-list ">
-                {ConnectLinks.map((link) => (
-                  <li className="transition-opacity col-span-1">
+                {ConnectLinks.map((link, index) => (
+                  <li key={index} className="transition-opacity col-span-1">
                     <Link
                       href={link.href}
                       className="rounded-lg border-gray-50 p-4 w-full border inline-grid  border-opacity-10"
@@ -100,13 +100,14 @@ export default function About() {
               </p>
               <h3>Tillsvidare Anställd</h3>
               <ul className="flex flex-col gap-8">
-                {Work.slice(0, 1).map((job) => (
-                  <li className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
+                {Work.slice(0, 1).map((job, index) => (
+                  <li key={index} className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
                     <Link href={job.link} className="flex justify-between">
                       <div className="flex gap-4 items-center">
                         <Image
                           src={job.image}
                           height={45}
+                          alt={job.title}
                           width={45}
                           className="rounded-md border border-white border-opacity-30 h-full object-cover"
                         />
@@ -124,12 +125,13 @@ export default function About() {
               </ul>
               <h3>Mina konsult arbeten</h3>
               <ul className="flex flex-col animated-list gap-8">
-                {Work.slice(1).map((job) => (
-                  <li className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
+                {Work.slice(1).map((job, index) => (
+                  <li key={index} className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
                     <Link href={job.link} className="flex justify-between">
                       <div className="flex gap-4 items-center">
                         <Image
                           src={job.image}
+                          alt={job.title}
                           height={45}
                           width={45}
                           className="rounded-md border border-white border-opacity-30 h-full object-cover"
