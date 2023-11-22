@@ -101,7 +101,10 @@ export default function About() {
               <h3>Tillsvidare Anställd</h3>
               <ul className="flex flex-col gap-8">
                 {Work.slice(0, 1).map((job, index) => (
-                  <li key={index} className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
+                  <li
+                    key={index}
+                    className="transition-opacity border-b-2 pb-4 border-white border-opacity-10"
+                  >
                     <Link href={job.link} className="flex justify-between">
                       <div className="flex gap-4 items-center">
                         <Image
@@ -126,7 +129,10 @@ export default function About() {
               <h3>Mina konsult arbeten</h3>
               <ul className="flex flex-col animated-list gap-8">
                 {Work.slice(1).map((job, index) => (
-                  <li key={index} className="transition-opacity border-b-2 pb-4 border-white border-opacity-10">
+                  <li
+                    key={index}
+                    className="transition-opacity border-b-2 pb-4 border-white border-opacity-10"
+                  >
                     <Link href={job.link} className="flex justify-between">
                       <div className="flex gap-4 items-center">
                         <Image
