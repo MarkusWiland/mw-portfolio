@@ -35,6 +35,7 @@ export default function GearEquipmentComp({ title }) {
             <li className="flex gap-4 items-center transition-opacity">
               <Image
                 src={gear.image}
+                alt={gear.title}
                 width={55}
                 height={55}
                 className="rounded-lg border border-gray-50 border-opacity-10"

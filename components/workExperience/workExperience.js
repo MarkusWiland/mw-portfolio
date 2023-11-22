@@ -5,8 +5,9 @@ import workExperienceTools from "../tools/workExperienceTools";
 export default function WorkExperience() {
   return (
     <>
-      {workExperienceTools.map((work) => (
+      {workExperienceTools.map((work, index) => (
         <div
+          key={index}
           className="bg-box animate-in flex flex-col justify-center items-center gap-2 border  border-opacity-10	rounded-md border-white py-10 px-10"
           style={{ "--index": work.index }}
         >
