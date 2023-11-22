@@ -49,9 +49,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <div>
-          <ModeToggle />
-        </div>
+      
       </nav>
     </header>
   );
