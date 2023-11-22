@@ -15,18 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-primary">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <div className=" pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto">
-            {children}
-          </div>
-          <Footer />
-        </ThemeProvider>
+        <Header />
+        <div className=" pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

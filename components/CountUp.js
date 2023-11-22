@@ -8,6 +8,6 @@ export default function CountUpNumber({ numb, duration = 2 }) {
     const animation = animate(count, numb, { duration: duration, delay: 0.5 });
 
     return animation.stop;
-  }, []);
+  }, [ numb]);
   return <motion.span>{rounded}</motion.span>;
 }
