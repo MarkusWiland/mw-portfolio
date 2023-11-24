@@ -1,23 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Posts from "@/components/Posts";
-import { allPosts } from ".contentlayer/generated";
 import CountUpNumber from "@/components/CountUp";
 import WorkExperience from "@/components/workExperience/workExperience";
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/github");
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+// async function getData() {
+//   const res = await fetch("http://localhost:3000/api/github");
+//   // The return value is *not* serialized
+//   // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error("Failed to fetch data");
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 export default async function Home() {
-  const getDataa = await getData();
+  // const getDataa = await getData();
 
   const posts = [
     {
@@ -105,7 +104,8 @@ export default async function Home() {
                   </svg>
                   <div className="flex gap-2">
                     <span>
-                      <CountUpNumber numb={getDataa.data.public_repos} />
+                      {/* <CountUpNumber numb={getDataa.data.public_repos} /> */}
+                      000
                     </span>
                     <span>Repositry stars</span>
                   </div>
