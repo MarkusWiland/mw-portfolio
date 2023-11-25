@@ -3,20 +3,11 @@ import Link from "next/link";
 import Posts from "@/components/Posts";
 import CountUpNumber from "@/components/CountUp";
 import WorkExperience from "@/components/workExperience/workExperience";
-// async function getData() {
-//   const res = await fetch("/api/github");
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+import Stats from "@/components/Stats";
+import statsTools from "@/components/tools/statsTools";
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
 export default async function Home() {
-  //  const getDataa = await getData();
+
 
   const posts = [
     {
@@ -84,82 +75,9 @@ export default async function Home() {
             style={{ "--index": 1 }}
           >
             <ul className="space-y-2  animated-list">
-              <li>
-                <Link href="/" className="flex items-center gap-2 text-title ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    length="auto"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-github"
-                  >
-                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                    <path d="M9 18c-4.51 2-5-2-7-2" />
-                  </svg>
-                  <div className="flex gap-2">
-                    <span>
-                      {/* <CountUpNumber numb={getDataa.data.public_repos} /> */}
-                      000
-                    </span>
-                    <span>Repositry stars</span>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="flex items-center gap-2 text-title ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    length="auto"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-trending-up"
-                  >
-                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                    <polyline points="16 7 22 7 22 13" />
-                  </svg>
-                  <div className="flex gap-2">
-                    <span>000,000</span>
-                    <span>Totala Blogg läsare</span>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="flex items-center gap-2 text-title ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    length="auto"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-receipt"
-                  >
-                    <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z" />
-                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-                    <path d="M12 17V7" />
-                  </svg>
-                  <div className="flex gap-2">
-                    <span>00,00</span>
-                    <span>Number of recepiters view</span>
-                  </div>
-                </Link>
-              </li>
+            {statsTools.map((tool, index) => (
+              <Stats key={index} stats={tool} />
+            ))}
             </ul>
           </div>
         </div>
