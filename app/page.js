@@ -4,7 +4,7 @@ import Posts from "@/components/Posts";
 import CountUpNumber from "@/components/CountUp";
 import WorkExperience from "@/components/workExperience/workExperience";
 // async function getData() {
-//   const res = await fetch("http://localhost:3000/api/github");
+//   const res = await fetch("/api/github");
 //   // The return value is *not* serialized
 //   // You can return Date, Map, Set, etc.
 
@@ -16,7 +16,7 @@ import WorkExperience from "@/components/workExperience/workExperience";
 //   return res.json();
 // }
 export default async function Home() {
-  // const getDataa = await getData();
+  //  const getDataa = await getData();
 
   const posts = [
     {
