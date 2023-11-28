@@ -2,22 +2,22 @@ import Card from "@/components/projects/Card";
 const dataa = [
   {
     title: "tailwind",
-    img: "/tailwind.png",
+    img: "/ga.jpeg",
     link: "/",
   },
   {
     title: "Next js",
-    img: "/nextjs.png",
+    img: "/ga.jpeg",
     link: "/",
   },
   {
     title: "React",
-    img: "/react.png",
+    img: "/ga.jpeg",
     link: "/",
   },
   {
     title: "Vue",
-    img: "/vue.png",
+    img: "/ga.jpeg",
     link: "/",
   },
 ];
