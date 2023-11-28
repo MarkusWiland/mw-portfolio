@@ -30,7 +30,7 @@ export default function Card({ card, index, leng }) {
             <h4>Descriptipn</h4>
             <p className="text-md">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
             </p>
             <div>
               <h4>Tech used</h4>
