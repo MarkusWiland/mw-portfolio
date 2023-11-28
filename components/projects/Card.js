@@ -18,7 +18,7 @@ export default function Card({ card, index, leng }) {
     >
       <motion.div
         style={{
-          top: `calc(-5vh + ${index * 40}px)`,
+          top: `calc(-5vh + ${index * 80}px)`,
           opacity: scrollYProgress,
         }}
         className={`flex flex-col relative w-full  origin-top	 bg-box py-4 px-8 border border-opacity-10 border-white rounded-md`}

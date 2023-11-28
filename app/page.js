@@ -32,7 +32,7 @@ export default async function Home() {
     },
   ];
   return (
-    <main className="flex flex-col gap-8 md:gap-12">
+    <main className="flex flex-col gap-8 md:gap-12 md:pt-24 pt-16 md:pb-24 pb-16">
       <section className="flex animate-in flex-col gap-8">
         <div>
           <h1 className="text-5xl animate-in text-primary text-center">
@@ -157,7 +157,7 @@ export default async function Home() {
           <Posts posts={posts} />
         </ul>
         <Link href="/" className="underline flex items-center">
-          See All Posts{" "}
+          Se alla poster{" "}
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

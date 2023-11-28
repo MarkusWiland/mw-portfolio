@@ -23,7 +23,7 @@ export default function Header() {
             pathName === "/" ? "text-gray-200" : "text-secondary"
           }`}
         >
-          <span>icon</span>
+    <Image src="/mw.png" width={60} height={60} alt={"MW"} />
         </Link>
         <ul className="md:flex gap-1 items-center">
           {tabs.map((tab) => (

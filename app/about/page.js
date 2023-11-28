@@ -21,7 +21,7 @@ export default function About() {
 
   return (
     <main>
-      <div className="flex flex-col gap-16 md:gap-24">
+      <div className="flex flex-col gap-16 md:gap-24 md:pt-24 pt-16 md:pb-24 pb-16">
         <div>
           <h1>Om Mig</h1>
           <h3>En snabbtitt</h3>
