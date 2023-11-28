@@ -23,7 +23,7 @@ export default function Header() {
             pathName === "/" ? "text-gray-200" : "text-secondary"
           }`}
         >
-          <Image src="/BGICON.png" alt="bgicon" width={100} height={100} />
+          <span>icon</span>
         </Link>
         <ul className="md:flex gap-1 items-center">
           {tabs.map((tab) => (

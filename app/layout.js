@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-primary text-primary">
         <Header />
-        <div className=" pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto">
+        <div className="max-w-[700px] mx-auto">
           {children}
         </div>
         <Footer />
