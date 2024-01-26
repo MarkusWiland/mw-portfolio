@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -26,6 +26,11 @@ const posts = [
   },
 ];
 export default function Blog() {
+  const [search, setSearch] = useState("");
+ 
+  const filteredPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(search.toLowerCase())
+  );
   const fadeInVariants = {
     initial: {
       opacity: 0,
@@ -46,10 +51,13 @@ export default function Blog() {
         <input
           name="search"
           placeholder="Sök..."
-          className="p-4 w-full rounded-md capitalize italic"
+
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="p-4 w-full rounded-md capitalize italic text-black"
         />
         <ul className="flex flex-col gap-4 animated-list pb-4 my-10 ">
-          {posts.map((post, index) => {
+          {filteredPosts.map((post, index) => {
             return (
               <motion.div
                 variants={fadeInVariants}
